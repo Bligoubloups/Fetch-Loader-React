@@ -7,27 +7,18 @@ const FetchData = (props) => {
 
     useEffect(() => {
         (async () => {
+            const resFunc = {
+                arrayBuffer: 'arrayBuffer',
+                blob: 'blob',
+                formData: 'formData',
+                json: 'json',
+                text: 'text'
+            }
             try {
                 if (Array.isArray(props.fetch) && props.fetch[0]) {
                     let res = await Promise.all(props.fetch);
-                    switch (props.type) {
-                        case 'arrayBuffer' :
-                            res = await Promise.all(res.map(res => res.arrayBuffer()));
-                            break;
-                        case 'blob' :
-                            res = await Promise.all(res.map(res => res.blob()));
-                            break;
-                        case 'formData' :
-                            res = await Promise.all(res.map(res => res.formData()));
-                            break;
-                        case 'json' :
-                            res = await Promise.all(res.map(res => res.json()));
-                            break;
-                        case 'text' :
-                            res = await Promise.all(res.map(res => res.text()));
-                            break;
-                        default :
-                            break;
+                    if (props.type && resFunc[props.type]) {
+                        res = await Promise.all(res.map(res => res[resFunc[props.type]]()));
                     }
                     setRes(res);
                     setLoading(false);
