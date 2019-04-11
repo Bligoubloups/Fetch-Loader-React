@@ -1,0 +1,24 @@
+{
+  "name": "fetch-loader-react",
+  "main": "dist/index.js",
+  "version": "1.0.0",
+  "description": "A React Component to display a custom loader when fetching data with fetch api or axios.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "babel ./src --out-dir ./dist  -s inline"
+  },
+  "author": "Marc Leonetti & Sven Mathieu",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "files": [
+    "dist/*"
+  ]
+}
