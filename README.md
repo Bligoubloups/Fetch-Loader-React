@@ -42,7 +42,7 @@ const fetchPromise2 = fetch('https://jsonplaceholder.typicode.com/todos/1'));
 </FetchData>
 ```
 
-### Using Fetch API
+### Using Axios
 
 ```js
 const axiosPromise1 = axios.get('https://jsonplaceholder.typicode.com/todos/1'));
