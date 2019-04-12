@@ -28,7 +28,7 @@ const fetchPromise1 = fetch('https://jsonplaceholder.typicode.com/todos/1'));
 const fetchPromise2 = fetch('https://jsonplaceholder.typicode.com/todos/1'));
 ```
 ```js
-<FetchData fetch={ [fetchPromise1, fetchPromise2] } type="json">
+<FetchLoader fetch={ [fetchPromise1, fetchPromise2] } type="json">
     {
         ({ loading, err, res }) => {
             if (loading) return <YourLoader />
@@ -39,7 +39,7 @@ const fetchPromise2 = fetch('https://jsonplaceholder.typicode.com/todos/1'));
             return <YourComponent res={res} />;
         }
     }
-</FetchData>
+</FetchLoader>
 ```
 
 ### Using Axios
@@ -49,7 +49,7 @@ const axiosPromise1 = axios.get('https://jsonplaceholder.typicode.com/todos/1'))
 const axiosPromise2 = axios.get('https://jsonplaceholder.typicode.com/todos/1'));
 ```
 ```js
-<FetchData fetch={ [axiosPromise1, axiosPromise2] }>
+<FetchLoader fetch={ [axiosPromise1, axiosPromise2] }>
     {
         ({ loading, err, res }) => {
             if (loading) return <YourLoader />
@@ -60,7 +60,7 @@ const axiosPromise2 = axios.get('https://jsonplaceholder.typicode.com/todos/1'))
             return <YourComponent res={res} />;
         }
     }
-</FetchData>
+</FetchLoader>
 ```
 
 ## Props
