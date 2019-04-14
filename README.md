@@ -7,7 +7,7 @@ Fetch-Loader-React is a simple and lightweight React Component which allows you 
 * Supports multiple ansynchronous fetches
 * Requires React 16.8.0 or above
 
-See an [example](https://jsfiddle.net/Bligoubloups/0bf248ce/22/) using multiple fetches with fetch api and axios.
+See an [example](https://jsfiddle.net/Bligoubloups/0bf248ce/24/) using multiple fetches with fetch api and axios.
 
 ## Installation
 
